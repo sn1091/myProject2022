@@ -10,7 +10,7 @@
 
 /* *은 잘 안씀, *{}  */
 /* 1. 기본태그 초기화 - 마진, 패딩 없애기 */
-html,body,h1{
+html,body,h1,ul,ol{
     margin: 0;
     padding: 0;
 }

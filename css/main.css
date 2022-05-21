@@ -1,2 +1,56 @@
 @charset "utf-8";
 
+/* 공통사용 외부CSS 파일합치기 */
+@import url(reset.css);
+@import url(core.css);
+@import url(common.css);
+
+/* 구현중 외곽선 표시 */
+body *{
+
+    border: 1px dashed gray;
+}
+
+body{
+    /* background : 색이반고윙/크 */
+    background: url(../images/배경.jpg) no-repeat top center/100%;
+}
+
+
+/* 2-1. 캐릭터 */
+
+#cha_box{
+    width: 90%;
+    margin: 0 auto;
+}
+
+
+.main_cont{
+    margin-top: 350px;
+}
+
+.cha{
+    float: left;
+    text-align: center;
+    width: 30%;
+    
+}
+#cha_box::after {
+    content: "";
+    display: block;
+    clear: both;
+  }
+
+.cha1>a>img{
+    width: 50%;
+}
+.cha2 >a >img{
+    width:32%;
+}
+.cha3>a>img{
+    width: 70%;
+    padding-top:10%;
+}
+.cha img{
+    vertical-align: top;
+}

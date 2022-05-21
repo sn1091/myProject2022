@@ -6,23 +6,30 @@
     <title>네모네모 스펀지밥</title>
 
     <link rel="stylesheet" href="css/main.css">
+    <!-- <link rel="stylesheet" href="css/reset.css"> -->
 </head>
 <body>
-    <header>
-        <!-- 메인 상단 로고 : 스펀지밥 로고 -->
+    <!-- 1. 상단 영역 - header -->
+    <header class="top">
+        <!-- 1-1. 메인 상단 로고 : 스펀지밥 로고 -->
         <h1 id="main_logo">
             <a href="#">
                 <img src="images/SpongeBob_SquarePants_logo.svg.png" alt="스펀지밥로고">
             </a>
         </h1>
         
-        <!-- 상단 우측 메뉴 -->
-        <aside>
+        <!--1-3,4. 상단 우측 메뉴 -->
+        <aside class="tmenu">
             <ul>
-                <li>로그인</li>
-                <li>회원가입</li>
+                <li>
+                    <a href="#">로그인</a>
+                </li>
+                <li>
+                    <a href="#">회원가입</a>
+                </li>
                 <li>
                     <a href="#">
+                        <!-- ir??로 만들어야함 -->
                         <!-- <img src="images/SNS icon.jpg" alt="트위터"> -->
                     </a>
                 </li>
@@ -35,12 +42,137 @@
                     <a href="#">
                         <!-- <img src="images/SNS icon.jpg" alt="페이스북"> -->
                     </a>
-                </li>
-
-                
+                </li> 
             </ul>
         </aside>
 
+        <!--1-2. GNB 메누  -->
+        <nav class="gnb">
+            <ul>
+                <!-- 첫번째 GNB 메뉴 : 스토리 -->
+                <li>
+                    <a href="#">스토리</a>
+
+                    <!-- 서브메뉴 4개 -->
+                    <ol>
+                        <li>
+                            <a href="#">시즌 1</a>
+                        </li>
+                    </ol>
+                    <ol>
+                        <li>
+                            <a href="#">시즌 2</a>
+                        </li>
+                    </ol>
+                    <ol>
+                        <li>
+                            <a href="#">시즌 3</a>
+                        </li>
+                    </ol>
+                    <ol>
+                        <li>
+                            <a href="#">시즌 4</a>
+                        </li>
+                    </ol>
+                </li>
+                <!-- 두번째 GNB 메뉴 : 등장인물 -->
+                <li>
+                    <a href="#">등장인물</a>
+
+                   <!-- 서브메뉴 3개-->
+                    <ol>
+                        <li>
+                            <a href="#">스펀지밥</a>
+                        </li>
+                    </ol>
+                    <ol>
+                        <li>
+                            <a href="#">뚱이</a>
+                        </li>
+                    </ol>
+                    <ol>
+                        <li>
+                            <a href="#">징징이</a>
+                        </li>
+                    </ol>
+                </li>
+
+                <!-- 세번째 GNB 메뉴 : 예고편 및 클립 -->
+                <li>
+                    <a href="#">예고편 및 클립</a>
+                </li>
+
+                <!-- 세번째 GNB 메뉴 : OST -->
+                <li>
+                    <a href="#">OST</a>
+                </li>
+            </ul>
+        </nav>
     </header>
+
+    <!-- 2. 메인영역 -->
+     <main class="main_cont">
+         <!-- 2-1. 캐릭터 영역 -->
+
+        <div id="cha_box">
+            <div class="cha1 cha">
+                <!-- 캐릭터 이미지 -->
+                <a href="#">
+                    <img src="images/cha2.png" alt="뚱이">
+                </a>
+                <!-- 마우스 오버 시 말풍선 -->
+            </div>
+            <div class="cha2 cha">
+                <a href="#">
+                    <img src="images/cha3.png" alt="징징이">
+                </a>
+            </div>
+            <div class="cha3 cha">
+                <a href="#">
+                    <img src="images/cha1.png" alt="스펀지밥">
+                </a>
+            </div>
+        </div>
+    </main>
+    
+    <!-- 3. 하단영역 -->
+    <footer class="footer_box">
+        <!-- 3-1. 하단 추가링크 메뉴 영역 -->
+       <div class="blink">
+            <ul>
+                <li>
+                    <a href="#">Privacy Policy</a>
+                </li>
+                <li>
+                    <a href="#">Privacy Collection Statement</a>
+                </li>
+                <li>
+                    <a href="#">Standards and Practices</a>
+                </li>
+                <li>
+                    <a href="#">Safety</a>
+                </li>
+                <li>
+                    <a href="#">Contact Us</a>
+                </li>
+            </ul>
+        </div>
+        
+        <!-- 3-4. 사이트 바로가기 -->
+
+        <select name="sel" id="sel">
+            <option value="init">사이트 바로가기</option>
+            <option value="tooniverse">투니버스</option>
+            <option value="anione">애니원</option>
+        </select>
+
+        <!-- 3-2. 하단로고 -->
+        <div class="footer_logo">
+            <img src="images/footer_logo.png" alt="회사로고">
+        </div>
+
+        <!-- 3-3. 카피라이트 저작권명시-->
+        <span class="cp">© 2022 Viacom International Inc. All Rights Reserved. Nick and all related titles, logos and characters are trademarks of Viacom International Inc.</span>
+    </footer>
 </body>
 </html>
