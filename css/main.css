@@ -11,27 +11,26 @@ body *{
     border: 1px dashed gray;
 }
 
-body{
+.main_cont{
     /* background : 색이반고윙/크 */
-    background: url(../images/배경.jpg) no-repeat top center/100%;
+    background: url(../images/배경.jpg) no-repeat scroll top/100%;
+    /* padding: 100px; */
+    /* height: 100vh; */
 }
 
 
 /* 2-1. 캐릭터 */
 
 #cha_box{
-    width: 90%;
-    margin: 0 auto;
+    width: 100%;
+    margin-top: 30%;
 }
 
-
-.main_cont{
-    margin-top: 350px;
-}
 
 .cha{
     float: left;
     text-align: center;
+    /* vertical-align: bottom; */
     width: 30%;
     
 }
@@ -49,8 +48,8 @@ body{
 }
 .cha3>a>img{
     width: 70%;
-    padding-top:10%;
+    /* padding-top:26%; */
 }
 .cha img{
-    vertical-align: top;
+    vertical-align: bottom;
 }
