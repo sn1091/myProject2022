@@ -3,71 +3,70 @@
 /* 상단영역, 하단영역 등 공통디자인 */
 
 /* 헤더영역 높이 지정 */
-.top{
+.top {
 
     /* height: 140px; */
     background-color: #fff;
-    background-image:linear-gradient(to bottom,#fff,#48f5d9);
+    background-image: linear-gradient(to bottom, #fff, #48f5d9);
 }
 
 
 /* 1-1 메인 로고 */
-#main_logo{
+#main_logo {
 
     margin: 10px;
     text-align: center;
 }
 
-#main_logo img{
+#main_logo img {
     width: 13%;
     vertical-align: bottom;
 }
 
 /* 1-3,4. 로그인, SNS 메뉴 */
 
-.tmenu{
+.tmenu {
     position: absolute;
     top: 20px;
     right: 20px;
 }
 
 
-.tmenu ul{
-    
-}
+.tmenu ul {}
 
-.tmenu>ul>li{
+.tmenu>ul>li {
     float: left;
     padding: 5px;
 }
 
-.tmenu>ul>li>a{
+.tmenu>ul>li>a {
     color: rgb(56, 133, 240);
-    
+
 
 }
 
-.gnb{
+.gnb {
     width: 800px;
-   margin: 0 auto;
+    margin: 0 auto;
 }
+
 .gnb>ul {
     /* 가로크기 */
     width: 800px;
-  
-    /* 마영오 - 블록요소 가로중앙정렬 */
-   
-  
-    outline: 2px dotted red;
-  }
 
-  .gnb ul::after {
+    /* 마영오 - 블록요소 가로중앙정렬 */
+
+
+    outline: 2px dotted red;
+}
+
+.gnb ul::after {
     content: "";
     display: block;
     clear: both;
-  }
+}
 
-  .gnb > ul > li {
+.gnb>ul>li {
     width: 200px;
     height: 40px;
     /* 블록요소 옆으로 흐르게 */
@@ -76,19 +75,20 @@
     /* padding: 0 5px; */
     /* 양쪽패딩 */
     box-sizing: border-box;
-  }
-  .gnb a {
-   
+}
+
+.gnb a {
+
     display: block;
     width: 100%;
-    height: 100%; 
+    height: 100%;
     text-align: center;
     text-decoration: none;
     font-size: 17px;
     line-height: 40px;
-  }
+}
 
-  .gnb>ul>li::after{
+.gnb>ul>li::after {
     content: '';
     display: block;
     position: absolute;
@@ -103,12 +103,12 @@
     background-color: #fff;
     /* top부분 미세위치 조정은 마진탑으로! */
     /* margin-top: 4px; */
-    
+
     /* 트랜지션:속시이지 -> .smenu와 동일!*/
     transition: height .4s ease-out;
 }
 
-.smenu{
+.smenu {
     position: absolute;
     height: 0;
     width: 200px;
@@ -116,80 +116,88 @@
     z-index: 999;
 }
 
-.smenu > li > a{
-font-size: 13px;
-line-height: 40px;
+.smenu>li>a {
+    font-size: 13px;
+    line-height: 40px;
 }
 
 
 /* li에 마우스 오버시 가상요소배경 하단보더 */
-.gnb>ul>li:hover::after{
+.gnb>ul>li:hover::after {
     border-bottom: 2px solid rgb(0, 157, 255);
     height: 180px;
-    background-image:linear-gradient(to bottom,#48f5d9,#fff);
+    background-image: linear-gradient(to bottom, #48f5d9, #fff);
 }
 
 /* li오버시 가상요소배경 보이기 */
-.gnb:hover li .smenu{
+.gnb:hover li .smenu {
     height: 180px;
 }
 
 
 /* 하단영역 */
-.footer_box{
+.footer_box {
     background: #415f60;
     /* position: relative; */
-    background-image:linear-gradient(to bottom,#415f60 30%,#fff);
+    background-image: linear-gradient(to bottom, #415f60 30%, #fff);
 }
 
-  /* blink : 하단 링크 */
-  .blink{ 
-      margin: 10px 0;
-      position: relative;
-  }
-  .blink ul{
-    width: 608px;
+/* blink : 하단 링크 */
+.blink {
+    margin: 10px 0;
+    position: relative;
+}
+
+.blink ul {
+    width: 684px;
     margin: 0 auto;
     border: 1px dashed red;
-  }
-  .blink li{
-      float: left;
-      padding: 2px 10px;
-  }
-  .blink ul::after {
+}
+
+.blink li {
+    float: left;
+    padding: 2px 10px;
+}
+
+.blink ul::after {
     content: "";
     display: block;
     clear: both;
-  }
+}
 
-  .blink ul a{
-      text-decoration: none;
-      font-size: 13px;
-  }
+.blink ul a {
+    text-decoration: none;
+    font-size: 15px;
+    color: #a1bab1;
+    text-shadow: white;
+}
 
-  /* 사이트 바로가기 */
-  #sel{
-      position: absolute;
-      top:5px;
-      right: 5%;
-      background-color: rgb(68, 100, 90);
-  }
-
-
-
-  .footer_logo{
-      text-align: center;
-  }
-  .footer_logo img{
-      width: 12%;
-  }
+/* 사이트 바로가기 */
+#sel {
+    position: absolute;
+    top: 5px;
+    right: 5%;
+    background-color: rgb(68, 100, 90);
+}
 
 
-  /* 카피라이트 */
-  .cp{
-      font-size: 13px;
-      color: lightgray;
-      font-weight: bold;
-      padding: 10px;
-      text-align: center;
-  }
+
+.footer_logo {
+    text-align: center;
+}
+
+.footer_logo img {
+    width: 12%;
+}
+
+
+/* 카피라이트 */
+.cp {
+    font-size: 13px;
+    color: #354d4d;
+    font-weight: bold;
+    text-shadow: white;
+    padding: 10px;
+    text-align: center;
+}
+
