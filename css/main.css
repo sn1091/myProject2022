@@ -13,9 +13,8 @@ body *{
 
 .main_cont{
     /* background : 색이반고윙/크 */
-    background: url(../images/배경.jpg) no-repeat scroll top/100%;
-    /* padding: 100px; */
-    /* height: 100vh; */
+    background: url(../images/배경.jpg) no-repeat scroll center/100%;
+    padding: 5%;
 }
 
 
@@ -23,6 +22,7 @@ body *{
 
 #cha_box{
     width: 100%;
+    
     margin-top: 30%;
 }
 
@@ -40,28 +40,33 @@ body *{
     clear: both;
   }
 
-.cha1>a img{
+.cha1 img{
     width: 50%;
+    margin-top: 2%
 }
-.cha2 >a img{
+.cha2 img{
     width:32%;
 }
-.cha3>a img{
+.cha3 img{
     width: 70%;
-    /* padding-top:26%; */
+    padding-top: 12%;
 }
-.cha img{
-    vertical-align: bottom;
-}
-.cha1 a img:last-child{
+
+.cha1 img:last-child{
     display: none;
 }
 
-.cha1 a:hover img:last-child{
+.cha span{
+/* 블록으로 변경 - 부모박스 끝까지 차지 */
+display: block;
+/* 인라인요소 중앙정렬 */
+text-align: center;
+}
+.cha span:hover img:last-child{
     display: block;
     transition : 1s;
 }
-.cha1 a:hover img:first-child{
+.cha span:hover img:first-child{
     display: none;
     transition : 1s;
 }
@@ -72,8 +77,8 @@ body *{
     background: skyblue;
     margin: 50px;
     width: 200px;
-    height: 100px;
-    border: 1px solid #f2f4f9;
+    padding: 10px;
+    /* border: 1px solid #f2f4f9; */
     border-radius: 10px;
     display: none;
 }
@@ -89,6 +94,10 @@ body *{
     left: 93px;
 }
 
-.cha:hover .balloon{
+.cha a:hover .balloon{
     display: block;
 } 
+
+.balloon b{
+    font-size: 15px;
+}
