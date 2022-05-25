@@ -48,6 +48,7 @@
 .gnb {
     width: 800px;
     margin: 0 auto;
+    border-bottom: 3px solid rgb(0, 157, 255);;
 }
 
 .gnb>ul {
@@ -57,13 +58,14 @@
     /* 마영오 - 블록요소 가로중앙정렬 */
 
 
-    outline: 2px dotted red;
+    /*outline: 2px dotted red;*/
 }
 
 .gnb ul::after {
     content: "";
     display: block;
     clear: both;
+    
 }
 
 .gnb>ul>li {
@@ -87,26 +89,36 @@
     font-size: 17px;
     line-height: 40px;
 }
-
-.gnb>ul>li::after {
+.gnb::after{
+    content: '';
+    display: block;
+    height: 0px;
+    width: 100%;
+    position: absolute;
+    left: 0;
+    background-image: linear-gradient(to bottom, #48f5d9, #fff);
+    transition: height .4s ease-in-out;
+}
+/* .gnb>ul>li::after {
     content: '';
     display: block;
     position: absolute;
     left: 0;
-    /* left의 부모는? 보이는화면 
+    left의 부모는? 보이는화면 
     (중간에 부모자격이 모두 없음)
     top값은 젠틀함
-    */
+   
     width: 100%;
-    /* 100%는 부모역할을 하는 보이는화면 기준! */
+    100%는 부모역할을 하는 보이는화면 기준!
     height: 0px;
     background-color: #fff;
-    /* top부분 미세위치 조정은 마진탑으로! */
-    /* margin-top: 4px; */
+    top부분 미세위치 조정은 마진탑으로!
+    margin-top: 4px;
 
-    /* 트랜지션:속시이지 -> .smenu와 동일!*/
+    트랜지션:속시이지 -> .smenu와 동일!
     transition: height .4s ease-in-out;
-}
+} */
+
 
 .smenu {
     position: absolute;
@@ -114,7 +126,7 @@
     width: 200px;
     overflow: hidden;
     z-index: 999;
-    transition: height .4s ease-in-out .1s;
+    transition: height .3s ease-in-out .1s;
 }
 
 .smenu>li>a {
@@ -124,17 +136,15 @@
 
 
 /* li에 마우스 오버시 가상요소배경 하단보더 */
-.gnb>ul>li:hover::after {
-    border-bottom: 2px solid rgb(0, 157, 255);
-    height: 180px;
-    background-image: linear-gradient(to bottom, #48f5d9, #fff);
+.gnb:hover::after {
+    border-bottom: 3px solid rgb(0, 157, 255);
+    height: 170px;
 }
 
 /* li오버시 가상요소배경 보이기 */
 .gnb:hover li .smenu {
     height: 180px;
 }
-
 
 /* 하단영역 */
 .footer_box {
@@ -145,14 +155,14 @@
 
 /* blink : 하단 링크 */
 .blink {
-    margin: 10px 0;
+    padding: 5px 0;
     position: relative;
 }
 
 .blink ul {
     width: 684px;
     margin: 0 auto;
-    border: 1px dashed red;
+  /*  border: 1px dashed red;*/
 }
 
 .blink li {
@@ -170,7 +180,7 @@
     text-decoration: none;
     font-size: 15px;
     color: #a1bab1;
-    text-shadow: white;
+    text-shadow: 1px 1px white;
 }
 
 /* 사이트 바로가기 */
@@ -179,6 +189,7 @@
     top: 5px;
     right: 5%;
     background-color: rgb(68, 100, 90);
+    color:antiquewhite;
 }
 
 
@@ -197,7 +208,7 @@
     font-size: 13px;
     color: #354d4d;
     font-weight: bold;
-    text-shadow: white;
+    text-shadow:2px 0 white;
     padding: 10px;
     text-align: center;
 }

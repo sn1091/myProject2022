@@ -8,9 +8,8 @@
 /* 구현중 외곽선 표시 */
 body *{
 
-    border: 1px dashed gray;
+   /* border: 1px dashed gray;*/
 }
-
 .main_cont{
     /* background : 색이반고윙/크 */
     background: url(../images/배경.jpg) no-repeat scroll top/100%;
@@ -74,7 +73,9 @@ body *{
 /* 말풍선 */
 .balloon{
     position: absolute;
-    top: -130px;
+    /* bottom: 309px; */
+    bottom: 45vh;
+    left: 0;
     background: rgb(5, 139, 248);
     margin: 20px;
     width: 200px;
