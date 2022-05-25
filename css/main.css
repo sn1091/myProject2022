@@ -13,8 +13,8 @@ body *{
 
 .main_cont{
     /* background : 색이반고윙/크 */
-    background: url(../images/배경.jpg) no-repeat scroll center/100%;
-    padding: 5%;
+    background: url(../images/배경.jpg) no-repeat scroll top/100%;
+    padding: 4%;
 }
 
 
@@ -40,6 +40,13 @@ body *{
     clear: both;
   }
 
+  .cha span{
+    position: relative;
+  /* 블록으로 변경 - 부모박스 끝까지 차지 */
+  /* display: block; */
+  /* 인라인요소 중앙정렬 */
+  text-align: center;
+ }
 .cha1 img{
     width: 50%;
     margin-top: 2%
@@ -52,52 +59,54 @@ body *{
     padding-top: 12%;
 }
 
-.cha1 img:last-child{
+.cha img:last-of-type{
     display: none;
 }
 
-.cha span{
-/* 블록으로 변경 - 부모박스 끝까지 차지 */
-display: block;
-/* 인라인요소 중앙정렬 */
-text-align: center;
+.cha span:hover img:last-of-type{
+    display: inline;
 }
-.cha span:hover img:last-child{
-    display: block;
-    transition : 1s;
-}
-.cha span:hover img:first-child{
+.cha span:hover img:first-of-type{
     display: none;
-    transition : 1s;
+    /* transition : 1s; */
 }
 
 /* 말풍선 */
 .balloon{
-    position: relative;
-    background: skyblue;
-    margin: 50px;
+    position: absolute;
+    top: -130px;
+    background: rgb(5, 139, 248);
+    margin: 20px;
     width: 200px;
-    padding: 10px;
+    height: 70px;
+    padding: 20px;
+    
     /* border: 1px solid #f2f4f9; */
-    border-radius: 10px;
+    border-radius: 50px;
+    /* display: none; */
+    /* opacity: 0; */
+    /* transition: opacity 1s ease-in; */
     display: none;
 }
 
 .balloon:after {
     content: "";
     position: absolute;
-    border-top: 20px solid skyblue;
+    border-top: 20px solid rgb(5, 139, 248);
     border-right: 10px solid transparent;
     border-left: 10px solid transparent;
-    border-bottom: 0px solid skyblue;
-    top: 100px;
+    border-bottom: 0px solid rgb(5, 139, 248);
+    top: 110px;
     left: 93px;
 }
 
-.cha a:hover .balloon{
+.cha span:hover .balloon{
     display: block;
 } 
 
 .balloon b{
     font-size: 15px;
+    text-align: center;
+    color: rgb(192, 241, 241);
+    text-shadow: 1px 0 #000
 }
