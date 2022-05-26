@@ -12,7 +12,7 @@ body *{
 }
 .main_cont{
     /* background : 색이반고윙/크 */
-    background: url(../images/배경.jpg) no-repeat scroll top/100%;
+    background: url(../images/배경.jpg) no-repeat scroll top/cover;
     padding: 4%;
 }
 
@@ -20,13 +20,14 @@ body *{
 /* 2-1. 캐릭터 */
 
 #cha_box{
-    width: 100%;
     
+    width: 100%;
     margin-top: 30%;
 }
 
 
 .cha{
+    position: relative;
     float: left;
     text-align: center;
     /* vertical-align: bottom; */
@@ -40,7 +41,7 @@ body *{
   }
 
   .cha span{
-    position: relative;
+    /* position: relative; */
   /* 블록으로 변경 - 부모박스 끝까지 차지 */
   /* display: block; */
   /* 인라인요소 중앙정렬 */
@@ -74,13 +75,13 @@ body *{
 .balloon{
     position: absolute;
     /* bottom: 309px; */
-    bottom: 45vh;
-    left: 0;
-    background: rgb(5, 139, 248);
-    margin: 20px;
-    width: 200px;
-    height: 70px;
-    padding: 20px;
+    top: -200px;
+    left: 10%;
+    background: rgba(252, 252, 255, 0.697);
+    margin: 2rem;
+    width: 20rem;
+    height: 7rem;
+    padding: 2rem;
     
     /* border: 1px solid #f2f4f9; */
     border-radius: 50px;
@@ -93,10 +94,10 @@ body *{
 .balloon:after {
     content: "";
     position: absolute;
-    border-top: 20px solid rgb(5, 139, 248);
+    border-top: 20px solid rgba(252, 252, 255, 0.697);
     border-right: 10px solid transparent;
     border-left: 10px solid transparent;
-    border-bottom: 0px solid rgb(5, 139, 248);
+    border-bottom: 0px solid rgba(252, 252, 255, 0.697);
     top: 110px;
     left: 93px;
 }
@@ -106,8 +107,8 @@ body *{
 } 
 
 .balloon b{
-    font-size: 15px;
+    font-size: 1.5rem;
     text-align: center;
-    color: rgb(192, 241, 241);
-    text-shadow: 1px 0 #000
+    color: yellow;
+    text-shadow: 1px 0 #000,-1px 0 #000,0 1px #000,0  -1px  #000;
 }

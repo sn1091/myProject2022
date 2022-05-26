@@ -1,0 +1,189 @@
+@charset "utf-8";
+/* 도깨비 메인 페이지 미디어쿼리 - media.css */
+
+/******************************* 1070px 이하 미디어쿼리 시작 *******************************/
+@media screen and (max-width:1070px) {
+
+    /* 1. 전체 rem단위 글자 변경위한 root글자크기 변경 */
+    html {
+        font-size: 8px;
+    }
+
+
+   
+
+    /* .gnb>ul>li.bgbx::after{
+        margin-top: 1px;
+    } */
+
+    /* 3.GNB 메뉴 */
+    .gnb>ul{
+        width: 600px;
+    }
+    .gnb ul li {
+        width: 150px;
+    }
+   
+
+    /* 4. 탑메뉴 */
+    .tmenu>ul>li>a {
+        line-height: 2rem;
+    }
+
+    /* 5. 개별 서브 메뉴 오버시 + 가상요소 서브배경 오버시*/
+
+    /* gnb에 마우스 오버시 가상요소배경 하단보더 */
+    .gnb:hover::after,
+    .gnb:hover li .smenu {
+    height: 130px;
+}
+.cha span:hover .balloon{
+top: -133px;
+}.cha span:hover .balloon::after{
+ top: 88px;
+}
+
+    /* 6. 하단링크 */
+    /* .blink ul {
+        width: 680px;
+    } */
+
+    /* 7. 하단박스 */
+    /* .info {
+        height: auto;
+        padding-bottom: 15px;
+    } */
+
+    /* 8. 브랜드 바로가기 */
+    /* .brand {
+        display: none;
+    }*/
+} 
+
+/******************************* 1070px 이하 미디어쿼리 끝 *******************************/
+
+
+/******************************* 800px 이하 미디어쿼리 시작 *******************************/
+@media screen and (max-width:800px) {
+
+    /* 1. 숨기기 */
+    /* GNB메뉴, 서브메뉴, 서브메뉴배경, 가상요소, 탑메뉴, 문구이미지, 하단링크 */
+    .gnb,
+    .tmenu,
+    .blink,
+    .smenu,
+    .gnb::after
+    
+     {
+        display: none;
+    }
+     /* 배경 설정 바꾸기 */
+     .main_cont{
+         /* background-origin: none; */
+        background-attachment: fixed;
+        background-position: center;
+
+     }
+     /* 상단로고,하단로고  */
+     #main_logo img,.footer_logo img{
+         width:22vw;
+     }
+
+
+    /* 2.높이값 자동 : 상단영역, 컨텐츠영역  */
+    .top,
+    .main_cont {
+        height: auto;
+    }
+
+    /* 3. 햄버거 버튼 보이게 하기 */
+    .ham {
+        display: block;
+     
+    }
+
+    /* 햄버거 버튼 스케일변경
+    (전체메뉴 보일때만) -> .top.on일 때만 */
+    .top.on .ham{
+        z-index: 999;
+        color: #fff;
+        transform: scale(3);
+    }
+
+    /* 햄버거 버튼 x버튼으로 문자모양변경 */
+    .top.on .ham::before{
+        content: '×';
+    }
+
+
+    /* 4. 캐릭터박스 비율변경 */
+    #cha_box{
+        margin-top: 0;
+    }
+    .cha {
+        width: 99%;
+        margin-top: 130px;
+    }
+    .cha span:hover .balloon{
+        left: 30%;
+    } 
+    /* 하단 푸터 */
+    .footer_box {
+       
+    }
+
+
+    /* 10. 햄버거 버튼 클릭시 전체메뉴 GNB 변경 */
+    /* GNB 보이기 -> .top.on 일때만 보이기 */
+    .top.on .gnb{
+          display: block;
+    }
+    .top{
+        z-index: 1;
+    }
+    .gnb {
+        position: fixed;
+        z-index: 1;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        background-color: rgb(0 0 0 / 50%);
+    }
+    .gnb> ul {
+        width: auto;
+        margin-top: 25vh;
+    }
+    
+    .gnb>ul>li {
+        /* 블록요소 옆으로 흐르게 */
+        float: none;
+        width: auto;
+        height: 15vh;/* 양쪽패딩 */
+        padding: 0;
+        margin: 0 auto;
+    }
+    
+    .gnb>ul>li>a {
+        /* 글자색 */
+        color: #fff;
+    
+        /* 글자크기 */
+        font-size: 4vh;
+        line-height: 15vh;
+    }
+
+    /* li 마우스 오버시 밑줄 색 변경 */
+    .gnb>ul>li:hover> a{
+        border-bottom-color: white;
+    }
+    
+    /* 전체메뉴 보일때 로고 맨위 */
+    #main_logo{
+        position: relative;
+        z-index: 999;
+    }
+}
+
+
+/******************************* 800px 이하 미디어쿼리 끝 *******************************/
